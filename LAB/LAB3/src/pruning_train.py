@@ -11,23 +11,16 @@ from torch.utils.data.dataloader import DataLoader
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
 import sys
+import torch.nn.utils.prune as prune
 
-sys.path.append("/homes/x22weng/efficient-deep-learning-lea/LAB/LAB1/")
-sys.path.append("/homes/x22weng/efficient-deep-learning-lea/LAB/LAB3/")
-from binaryconnect import BC
+sys.path.append("../LAB1")
 from resnet import ResNet18
 
+
 #############################################################################################################################################################
-def binary_train(args):
-    # Initialize Weights & Biases
-    wandb.init(project="deep-learning-lab3", config=args.__dict__ , name="binary_training")
-
-    # Set device
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
+def global_unstructured_pruning_train(args):
     # Data preprocessing
     normalize_scratch = transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))
-
     transform_train = transforms.Compose([
         transforms.RandomCrop(32, padding=4),
         transforms.RandomHorizontalFlip(),
@@ -36,55 +29,50 @@ def binary_train(args):
         transforms.ToTensor(),
         normalize_scratch,
     ])
-
     transform_test = transforms.Compose([
         transforms.ToTensor(),
         normalize_scratch,
     ])
-
     c10train = CIFAR10(args.data_path,train=True,download=True,transform=transform_train)
     c10test = CIFAR10(args.data_path,train=False,download=True,transform=transform_test)
-
     trainloader = DataLoader(c10train,batch_size=args.batch_size,shuffle=True)
     testloader = DataLoader(c10test,batch_size=args.batch_size)
+    # Initialize Weights & Biases
+    wandb.init(project="deep-learning-lab3", config=args.__dict__ , name="pruning_training", job_type="training_test")
+
+    # Set device
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 
     # Fetch the model
-    # loaded_cpt = torch.load('/homes/x22weng/efficient-deep-learning-lea/LAB/LAB3/models/test.pth')
+    loaded_cpt = torch.load('./models/test.pth')
     model = ResNet18()
-    # model.load_state_dict(loaded_cpt['model_state_dict'])
-
-    # Get the binary model
-    mymodelbc = BC(model)
-    mymodelbc.model = mymodelbc.model.to(device)
+    model.load_state_dict(loaded_cpt['model_state_dict'])
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam( mymodelbc.model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay)
+    optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay)
     scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=3, verbose=True)
 
-    # Training loop
+    # 1) Prune the pretrained model 
+    parameters_to_prune = []
+    for module in model.modules():
+        if isinstance(module, (nn.Conv2d, nn.Linear)):
+            parameters_to_prune.append((module, 'weight'))
+    prune.global_unstructured(parameters_to_prune, pruning_method=prune.L1Unstructured, amount=args.amount)
+
+    # 2) Retrain the model after global unstructured pruning
     for epoch in range(args.epochs):
-        mymodelbc.model.train()
+        model.train()
         running_loss = 0.0
         correct_train = 0
         total_train = 0
         for images, labels in trainloader:
             images, labels = images.to(device), labels.to(device)
-
-            # 1️) **Binarize weights before forward pass**
-            mymodelbc.binarization()
-
             optimizer.zero_grad()
-            outputs =  mymodelbc.model(images)
+            outputs = model(images)
             loss = criterion(outputs, labels)
-
-            # 2️) **Restore full precision after backpropagation**
             loss.backward()
             optimizer.step()
-            mymodelbc.restore()
-
-            # 3️) **Clip weights after update**
-            mymodelbc.clip()
-
             running_loss += loss.item()
 
             # Training accuracy
@@ -95,11 +83,10 @@ def binary_train(args):
         train_accuracy = 100 * correct_train / total_train
         train_loss = running_loss / len(trainloader)
 
-        print(f"TRAINING: Epoch [{epoch+1}/{args.epochs}], Loss: {train_loss:.4f}, Accuracy: {train_accuracy:.4f}, Learning rate: {optimizer.param_groups[0]['lr']}")
+        #print(f"TRAINING: Epoch [{epoch+1}/{args.epochs}], Loss: {train_loss:.4f}, Accuracy: {train_accuracy:.4f}, Learning rate: {optimizer.param_groups[0]['lr']}")
 
         # Evaluate on test set
-        mymodelbc.model.eval()
-        mymodelbc.binarization()
+        model.eval()
         correct_test = 0
         total_test = 0
         test_loss = 0.0
@@ -107,7 +94,7 @@ def binary_train(args):
         with torch.no_grad():
             for images, labels in testloader:
                 images, labels = images.to(device), labels.to(device)
-                outputs =  mymodelbc.model(images)
+                outputs = model(images)
                 loss = criterion(outputs, labels)
                 test_loss += loss.item()
 
@@ -127,19 +114,18 @@ def binary_train(args):
             "test_accuracy": test_accuracy,
             "train_learning_rate": optimizer.param_groups[0]['lr'],
         })
-        print(f"Epoch {epoch+1}: "
+        print(f"Epoch {epoch+1}/{args.epochs}: "
               f"Train Loss: {train_loss:.4f}, "
               f"Train Acc: {train_accuracy:.2f}%, "
               f"Test Loss: {test_loss:.4f}, "
               f"Test Acc: {test_accuracy:.2f}% "
               f"Learning Rate: {optimizer.param_groups[0]['lr']}")
         
-        
     print("Training complete my boss")
     wandb.finish()
     # Save model along with training hyperparameters
     checkpoint = {
-        "model_state_dict":  mymodelbc.model.state_dict(),
+        "model_state_dict": model.state_dict(),
         "optimizer_state_dict": optimizer.state_dict(),
         "epochs": args.epochs,
         "weight_decay": args.weight_decay,
@@ -156,9 +142,15 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
     parser.add_argument("--learning_rate", type=float, default=0.001, help="Learning rate")
     parser.add_argument("--data_path", type=str, default="/opt/img/effdl-cifar10/", help="Path to the dataset")
-    parser.add_argument("--save_path", type=str, default="models/ mymodelbc.pth", help="Path to save the model")
+    parser.add_argument("--save_path", type=str, default="models/global_unstructured.pth", help="Path to save the model")
+    parser.add_argument("--amount", type=float, default=0.2, help="amount for global unstructured pruning")
     
 
 
     args = parser.parse_args()
-    binary_train(args)
+    global_unstructured_pruning_train(args)
+
+    import torch
+import torch.nn.utils.prune as prune
+import torch.nn as nn
+

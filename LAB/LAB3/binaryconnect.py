@@ -3,7 +3,7 @@
 ### for a complete description of the algotihm 
 
 
-#  
+
 import torch
 import torch.nn as nn
 import numpy
