@@ -1,0 +1,456 @@
+Files already downloaded and verified
+Files already downloaded and verified
+c:\Users\leami\anaconda3\Lib\site-packages\torch\optim\lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+TRAINING: Epoch [1/75], Loss: 1.4183, Accuracy: 48.2920, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 1: Train Loss: 1.4183, Train Acc: 48.29%, Test Loss: 1.3990, Test Acc: 51.24% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [2/75], Loss: 1.0620, Accuracy: 62.1580, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 2: Train Loss: 1.0620, Train Acc: 62.16%, Test Loss: 0.9812, Test Acc: 65.97% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [3/75], Loss: 0.9208, Accuracy: 67.4860, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 3: Train Loss: 0.9208, Train Acc: 67.49%, Test Loss: 0.8535, Test Acc: 70.34% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [4/75], Loss: 0.8187, Accuracy: 71.3460, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 4: Train Loss: 0.8187, Train Acc: 71.35%, Test Loss: 0.7752, Test Acc: 72.78% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [5/75], Loss: 0.7538, Accuracy: 73.7620, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 5: Train Loss: 0.7538, Train Acc: 73.76%, Test Loss: 0.7011, Test Acc: 75.72% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [6/75], Loss: 0.6997, Accuracy: 75.6780, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 6: Train Loss: 0.6997, Train Acc: 75.68%, Test Loss: 0.6762, Test Acc: 77.51% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [7/75], Loss: 0.6597, Accuracy: 77.2940, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 7: Train Loss: 0.6597, Train Acc: 77.29%, Test Loss: 0.5918, Test Acc: 79.85% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [8/75], Loss: 0.6357, Accuracy: 78.1800, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 8: Train Loss: 0.6357, Train Acc: 78.18%, Test Loss: 0.5872, Test Acc: 79.74% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [9/75], Loss: 0.6077, Accuracy: 79.0300, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 9: Train Loss: 0.6077, Train Acc: 79.03%, Test Loss: 0.6047, Test Acc: 79.54% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [10/75], Loss: 0.5862, Accuracy: 79.6280, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 10: Train Loss: 0.5862, Train Acc: 79.63%, Test Loss: 0.5510, Test Acc: 81.47% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [11/75], Loss: 0.5685, Accuracy: 80.4540, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 11: Train Loss: 0.5685, Train Acc: 80.45%, Test Loss: 0.6538, Test Acc: 79.35% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [12/75], Loss: 0.5577, Accuracy: 80.7460, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 12: Train Loss: 0.5577, Train Acc: 80.75%, Test Loss: 0.5458, Test Acc: 81.81% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [13/75], Loss: 0.5442, Accuracy: 81.2220, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 13: Train Loss: 0.5442, Train Acc: 81.22%, Test Loss: 0.5866, Test Acc: 80.68% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [14/75], Loss: 0.5341, Accuracy: 81.6220, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 14: Train Loss: 0.5341, Train Acc: 81.62%, Test Loss: 0.5265, Test Acc: 82.32% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [15/75], Loss: 0.5297, Accuracy: 81.7240, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 15: Train Loss: 0.5297, Train Acc: 81.72%, Test Loss: 0.5323, Test Acc: 82.68% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [16/75], Loss: 0.5191, Accuracy: 82.1140, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 16: Train Loss: 0.5191, Train Acc: 82.11%, Test Loss: 0.4757, Test Acc: 83.86% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [17/75], Loss: 0.5137, Accuracy: 82.3060, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 17: Train Loss: 0.5137, Train Acc: 82.31%, Test Loss: 0.4885, Test Acc: 83.56% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [18/75], Loss: 0.5105, Accuracy: 82.5320, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 18: Train Loss: 0.5105, Train Acc: 82.53%, Test Loss: 0.4971, Test Acc: 83.42% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [19/75], Loss: 0.5022, Accuracy: 82.8300, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 19: Train Loss: 0.5022, Train Acc: 82.83%, Test Loss: 0.4621, Test Acc: 84.51% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [20/75], Loss: 0.4954, Accuracy: 83.0460, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 20: Train Loss: 0.4954, Train Acc: 83.05%, Test Loss: 0.4712, Test Acc: 84.30% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [21/75], Loss: 0.4873, Accuracy: 83.2840, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 21: Train Loss: 0.4873, Train Acc: 83.28%, Test Loss: 0.5325, Test Acc: 82.47% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [22/75], Loss: 0.4876, Accuracy: 83.0880, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 22: Train Loss: 0.4876, Train Acc: 83.09%, Test Loss: 0.4891, Test Acc: 83.83% Learning Rate: 0.001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [23/75], Loss: 0.4839, Accuracy: 83.3200, Learning rate: 0.001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 23: Train Loss: 0.4839, Train Acc: 83.32%, Test Loss: 0.4883, Test Acc: 83.61% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [24/75], Loss: 0.3846, Accuracy: 86.7860, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 24: Train Loss: 0.3846, Train Acc: 86.79%, Test Loss: 0.3589, Test Acc: 88.26% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [25/75], Loss: 0.3543, Accuracy: 87.8020, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 25: Train Loss: 0.3543, Train Acc: 87.80%, Test Loss: 0.3535, Test Acc: 88.05% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [26/75], Loss: 0.3354, Accuracy: 88.4260, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 26: Train Loss: 0.3354, Train Acc: 88.43%, Test Loss: 0.3355, Test Acc: 88.75% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [27/75], Loss: 0.3238, Accuracy: 88.8460, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 27: Train Loss: 0.3238, Train Acc: 88.85%, Test Loss: 0.3313, Test Acc: 89.24% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [28/75], Loss: 0.3185, Accuracy: 89.0220, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 28: Train Loss: 0.3185, Train Acc: 89.02%, Test Loss: 0.3344, Test Acc: 89.04% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [29/75], Loss: 0.3077, Accuracy: 89.3640, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 29: Train Loss: 0.3077, Train Acc: 89.36%, Test Loss: 0.3293, Test Acc: 89.13% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [30/75], Loss: 0.3028, Accuracy: 89.6540, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 30: Train Loss: 0.3028, Train Acc: 89.65%, Test Loss: 0.3248, Test Acc: 89.22% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [31/75], Loss: 0.2942, Accuracy: 89.9960, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 31: Train Loss: 0.2942, Train Acc: 90.00%, Test Loss: 0.3292, Test Acc: 89.11% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [32/75], Loss: 0.2906, Accuracy: 89.9080, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 32: Train Loss: 0.2906, Train Acc: 89.91%, Test Loss: 0.3342, Test Acc: 89.15% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [33/75], Loss: 0.2847, Accuracy: 90.1340, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 33: Train Loss: 0.2847, Train Acc: 90.13%, Test Loss: 0.3238, Test Acc: 89.21% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [34/75], Loss: 0.2844, Accuracy: 90.1400, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 34: Train Loss: 0.2844, Train Acc: 90.14%, Test Loss: 0.3199, Test Acc: 89.64% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [35/75], Loss: 0.2798, Accuracy: 90.3480, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 35: Train Loss: 0.2798, Train Acc: 90.35%, Test Loss: 0.3235, Test Acc: 89.31% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [36/75], Loss: 0.2755, Accuracy: 90.5780, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 36: Train Loss: 0.2755, Train Acc: 90.58%, Test Loss: 0.3247, Test Acc: 89.41% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [37/75], Loss: 0.2705, Accuracy: 90.5720, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 37: Train Loss: 0.2705, Train Acc: 90.57%, Test Loss: 0.3262, Test Acc: 89.42% Learning Rate: 0.0001Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [38/75], Loss: 0.2658, Accuracy: 90.8200, Learning rate: 0.0001
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 38: Train Loss: 0.2658, Train Acc: 90.82%, Test Loss: 0.3260, Test Acc: 89.64% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [39/75], Loss: 0.2549, Accuracy: 91.0540, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 39: Train Loss: 0.2549, Train Acc: 91.05%, Test Loss: 0.3147, Test Acc: 89.88% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [40/75], Loss: 0.2477, Accuracy: 91.6300, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 40: Train Loss: 0.2477, Train Acc: 91.63%, Test Loss: 0.3089, Test Acc: 90.01% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [41/75], Loss: 0.2486, Accuracy: 91.3720, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 41: Train Loss: 0.2486, Train Acc: 91.37%, Test Loss: 0.3109, Test Acc: 89.98% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [42/75], Loss: 0.2484, Accuracy: 91.3520, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 42: Train Loss: 0.2484, Train Acc: 91.35%, Test Loss: 0.3088, Test Acc: 90.01% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [43/75], Loss: 0.2499, Accuracy: 91.2620, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 43: Train Loss: 0.2499, Train Acc: 91.26%, Test Loss: 0.3074, Test Acc: 90.08% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [44/75], Loss: 0.2472, Accuracy: 91.4620, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 44: Train Loss: 0.2472, Train Acc: 91.46%, Test Loss: 0.3112, Test Acc: 89.96% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [45/75], Loss: 0.2412, Accuracy: 91.7140, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 45: Train Loss: 0.2412, Train Acc: 91.71%, Test Loss: 0.3081, Test Acc: 89.92% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [46/75], Loss: 0.2441, Accuracy: 91.6200, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 46: Train Loss: 0.2441, Train Acc: 91.62%, Test Loss: 0.3063, Test Acc: 90.09% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [47/75], Loss: 0.2423, Accuracy: 91.6120, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 47: Train Loss: 0.2423, Train Acc: 91.61%, Test Loss: 0.3078, Test Acc: 90.06% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [48/75], Loss: 0.2432, Accuracy: 91.5400, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 48: Train Loss: 0.2432, Train Acc: 91.54%, Test Loss: 0.3053, Test Acc: 90.19% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [49/75], Loss: 0.2427, Accuracy: 91.6160, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 49: Train Loss: 0.2427, Train Acc: 91.62%, Test Loss: 0.3086, Test Acc: 90.09% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [50/75], Loss: 0.2396, Accuracy: 91.7340, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 50: Train Loss: 0.2396, Train Acc: 91.73%, Test Loss: 0.3084, Test Acc: 90.08% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [51/75], Loss: 0.2407, Accuracy: 91.8040, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 51: Train Loss: 0.2407, Train Acc: 91.80%, Test Loss: 0.3050, Test Acc: 90.14% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [52/75], Loss: 0.2414, Accuracy: 91.6760, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 52: Train Loss: 0.2414, Train Acc: 91.68%, Test Loss: 0.3081, Test Acc: 90.12% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [53/75], Loss: 0.2417, Accuracy: 91.6540, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 53: Train Loss: 0.2417, Train Acc: 91.65%, Test Loss: 0.3109, Test Acc: 90.09% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [54/75], Loss: 0.2375, Accuracy: 91.8380, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 54: Train Loss: 0.2375, Train Acc: 91.84%, Test Loss: 0.3059, Test Acc: 90.09% Learning Rate: 1e-05Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [55/75], Loss: 0.2401, Accuracy: 91.8380, Learning rate: 1e-05
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 55: Train Loss: 0.2401, Train Acc: 91.84%, Test Loss: 0.3079, Test Acc: 90.10% Learning Rate: 1.0000000000000002e-06Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [56/75], Loss: 0.2348, Accuracy: 92.0000, Learning rate: 1.0000000000000002e-06
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 56: Train Loss: 0.2348, Train Acc: 92.00%, Test Loss: 0.3064, Test Acc: 90.10% Learning Rate: 1.0000000000000002e-06Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [57/75], Loss: 0.2390, Accuracy: 91.6780, Learning rate: 1.0000000000000002e-06
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 57: Train Loss: 0.2390, Train Acc: 91.68%, Test Loss: 0.3079, Test Acc: 90.02% Learning Rate: 1.0000000000000002e-06Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [58/75], Loss: 0.2334, Accuracy: 91.8920, Learning rate: 1.0000000000000002e-06
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 58: Train Loss: 0.2334, Train Acc: 91.89%, Test Loss: 0.3065, Test Acc: 90.08% Learning Rate: 1.0000000000000002e-06Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [59/75], Loss: 0.2346, Accuracy: 91.9160, Learning rate: 1.0000000000000002e-06
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 59: Train Loss: 0.2346, Train Acc: 91.92%, Test Loss: 0.3056, Test Acc: 90.22% Learning Rate: 1.0000000000000002e-07Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [60/75], Loss: 0.2362, Accuracy: 91.9300, Learning rate: 1.0000000000000002e-07
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 60: Train Loss: 0.2362, Train Acc: 91.93%, Test Loss: 0.3060, Test Acc: 90.28% Learning Rate: 1.0000000000000002e-07Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [61/75], Loss: 0.2364, Accuracy: 91.8220, Learning rate: 1.0000000000000002e-07
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 61: Train Loss: 0.2364, Train Acc: 91.82%, Test Loss: 0.3058, Test Acc: 90.23% Learning Rate: 1.0000000000000002e-07Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [62/75], Loss: 0.2372, Accuracy: 91.7640, Learning rate: 1.0000000000000002e-07
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 62: Train Loss: 0.2372, Train Acc: 91.76%, Test Loss: 0.3083, Test Acc: 90.06% Learning Rate: 1.0000000000000002e-07Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [63/75], Loss: 0.2367, Accuracy: 91.9900, Learning rate: 1.0000000000000002e-07
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 63: Train Loss: 0.2367, Train Acc: 91.99%, Test Loss: 0.3063, Test Acc: 90.09% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [64/75], Loss: 0.2352, Accuracy: 91.8700, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 64: Train Loss: 0.2352, Train Acc: 91.87%, Test Loss: 0.3125, Test Acc: 90.14% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [65/75], Loss: 0.2367, Accuracy: 91.8260, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 65: Train Loss: 0.2367, Train Acc: 91.83%, Test Loss: 0.3099, Test Acc: 90.07% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [66/75], Loss: 0.2372, Accuracy: 91.6740, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 66: Train Loss: 0.2372, Train Acc: 91.67%, Test Loss: 0.3068, Test Acc: 90.17% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [67/75], Loss: 0.2359, Accuracy: 91.7680, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 67: Train Loss: 0.2359, Train Acc: 91.77%, Test Loss: 0.3074, Test Acc: 90.27% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [68/75], Loss: 0.2366, Accuracy: 91.8120, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 68: Train Loss: 0.2366, Train Acc: 91.81%, Test Loss: 0.3067, Test Acc: 90.15% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [69/75], Loss: 0.2359, Accuracy: 91.8140, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 69: Train Loss: 0.2359, Train Acc: 91.81%, Test Loss: 0.3084, Test Acc: 90.14% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [70/75], Loss: 0.2360, Accuracy: 91.9160, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 70: Train Loss: 0.2360, Train Acc: 91.92%, Test Loss: 0.3098, Test Acc: 90.06% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [71/75], Loss: 0.2346, Accuracy: 91.9200, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 71: Train Loss: 0.2346, Train Acc: 91.92%, Test Loss: 0.3072, Test Acc: 90.25% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [72/75], Loss: 0.2383, Accuracy: 91.7900, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 72: Train Loss: 0.2383, Train Acc: 91.79%, Test Loss: 0.3081, Test Acc: 90.17% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [73/75], Loss: 0.2380, Accuracy: 91.8460, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 73: Train Loss: 0.2380, Train Acc: 91.85%, Test Loss: 0.3086, Test Acc: 90.11% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [74/75], Loss: 0.2314, Accuracy: 92.0280, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 74: Train Loss: 0.2314, Train Acc: 92.03%, Test Loss: 0.3097, Test Acc: 90.15% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+TRAINING: Epoch [75/75], Loss: 0.2355, Accuracy: 91.9120, Learning rate: 1.0000000000000004e-08
+[INFO] Register count_convNd() for <class 'torch.nn.modules.conv.Conv2d'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.batchnorm.BatchNorm2d'>.
+[INFO] Register zero_ops() for <class 'torch.nn.modules.container.Sequential'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+Epoch 75: Train Loss: 0.2355, Train Acc: 91.91%, Test Loss: 0.3086, Test Acc: 90.08% Learning Rate: 1.0000000000000004e-08Num params: 1228970Num operations: 64539136.0
+Training complete my boss
+Model and training details saved to ./resnet8.pth

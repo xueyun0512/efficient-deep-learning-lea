@@ -1,0 +1,1 @@
+{"train_learning_rate":0.0001,"train_accuracy":87.424,"test_loss":0.33070215098797134,"_timestamp":1.7411833864655428e+09,"_runtime":1665.7897918,"train_loss":0.3692122006126682,"_wandb":{"runtime":1665},"test_accuracy":88.61,"_step":19}
