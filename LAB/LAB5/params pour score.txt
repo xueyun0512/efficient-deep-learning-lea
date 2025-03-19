@@ -1,3 +1,6 @@
 grouped 8 : params: 1561674Num operations: 78943232.0 --> Score = 0.280405
 grouped 4 : Num params: 2934858Num operations: 147362816.0 --> Score = 0.525189
 depthwise : Num params : 1438117 Num operations : 74575872 --> Score = 0.261575
+resnet8   : Num params: 4903242 Num operations: 254907392.0 --> Score = 0.892981
+resnet8 4 : Num params: 1364298 Num operations: 70882304.0 --> Score = 0.248388
+depthwise pruned (0.2) = 0.20926
