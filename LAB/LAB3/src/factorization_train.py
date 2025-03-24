@@ -164,10 +164,10 @@ def factorization_train(args):
     model_no_falvor = ResNet18()
 
     # Depthwise
-    # model = ResNet18_Modified_Depthwise(model_no_falvor, args.use_depthwise).to(device)
+    model = ResNet18_Modified_Depthwise(model_no_falvor, args.use_depthwise).to(device)
 
     # Grouped factorization
-    model = ResNet18(use_grouped=args.use_grouped, groups=args.groups).to(device)
+    # model = ResNet18(use_grouped=args.use_grouped, groups=args.groups).to(device)
     # model = ResNet18_Modified_Grouped(model_no_falvor, args.use_grouped, args.groups).to(device)
     
     criterion = nn.CrossEntropyLoss()
@@ -259,7 +259,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
     parser.add_argument("--learning_rate", type=float, default=0.001, help="Learning rate")
     parser.add_argument("--data_path", type=str, default="/opt/img/effdl-cifar10/", help="Path to the dataset")
-    parser.add_argument("--save_path", type=str, default="models/grouped_4_bis_model_half.pth", help="Path to save the model")
+    parser.add_argument("--save_path", type=str, default="models/depthwise_epochs_100.pth", help="Path to save the model")
     parser.add_argument("--use_depthwise", action='store_true', help="Use depthwise separable convolutions")
     parser.add_argument("--use_grouped", action='store_true', help="Use grouped factorization on convolutions")
     parser.add_argument("--groups", type=int, default=2, help="Group size for grouped factorization")

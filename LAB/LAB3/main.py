@@ -3,7 +3,7 @@ import os
 
 def main():    
     parser = argparse.ArgumentParser(description="Deep Learning Pipeline")
-    parser.add_argument("mode", choices=["train", "evaluate","binary_train","pruning_train"], help="Mode to run the script")
+    parser.add_argument("mode", choices=["train", "evaluate","binary_train","pruning_train","factorization_train"], help="Mode to run the script")
     parser.add_argument("--data_path", type=str, default="/opt/img/effdl-cifar10/", help="Path to the dataset")
 
     # Training arguments
@@ -19,6 +19,11 @@ def main():
     # Evaluation arguments
     parser.add_argument("--model_path", type=str, default="models/test.pth", help="Path to the trained model")
 
+    # Factorization
+    parser.add_argument("--use_depthwise", action='store_true', help="Use depthwise separable convolutions")
+    parser.add_argument("--use_grouped", action='store_true', help="Use grouped factorization on convolutions")
+    parser.add_argument("--groups", type=int, default=2, help="Group size for grouped factorization")
+
     args = parser.parse_args()
 
     if args.mode == "train":
@@ -31,6 +36,9 @@ def main():
 
     elif args.mode == "pruning_train":
         os.system(f"python src/pruning_train.py --epochs {args.epochs} --weight_decay {args.weight_decay} --batch_size {args.batch_size} --learning_rate {args.learning_rate} --data_path {args.data_path} --amount {args.amount}")
+
+    elif args.mode == "factorization_train":
+        os.system(f"python src/factorization_train.py --epochs {args.epochs} --weight_decay {args.weight_decay} --batch_size {args.batch_size} --learning_rate {args.learning_rate} --data_path {args.data_path} --use_depthwise --use_grouped --groups {args.groups}")
 
 if __name__ == "__main__":
     main()

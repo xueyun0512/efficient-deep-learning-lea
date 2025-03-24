@@ -12,13 +12,14 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
 import sys
 import torch.nn.utils.prune as prune
+from factorization_train import DepthwiseSeparableConv, ResNet18_Modified_Depthwise
 
 sys.path.append("../LAB1")
 from resnet import ResNet18
 
 
 #############################################################################################################################################################
-def global_unstructured_pruning_train(args):
+def pruning_train(args):
     # Data preprocessing
     normalize_scratch = transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))
     transform_train = transforms.Compose([
@@ -37,28 +38,35 @@ def global_unstructured_pruning_train(args):
     c10test = CIFAR10(args.data_path,train=False,download=True,transform=transform_test)
     trainloader = DataLoader(c10train,batch_size=args.batch_size,shuffle=True)
     testloader = DataLoader(c10test,batch_size=args.batch_size)
-    # Initialize Weights & Biases
-    wandb.init(project="deep-learning-lab3", config=args.__dict__ , name="pruning_training", job_type="training_test")
+
 
     # Set device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
     # Fetch the model
-    loaded_cpt = torch.load('./models/test.pth')
-    model = ResNet18()
+    loaded_cpt = torch.load('./models/depthwise_epochs_100.pth')
+    # print(loaded_cpt['model_state_dict'])
+    model_no_flavor = ResNet18()
+    model = ResNet18_Modified_Depthwise(model_no_flavor, True)
+    # model = ResNet18_Modified_Grouped(model_no_flavor, True, 4)
     model.load_state_dict(loaded_cpt['model_state_dict'])
+    model.to(device)
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay)
     scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=3, verbose=True)
 
-    # 1) Prune the pretrained model 
-    parameters_to_prune = []
+    # 1) Local structure pruning on the pretrained model 
     for module in model.modules():
-        if isinstance(module, (nn.Conv2d, nn.Linear)):
-            parameters_to_prune.append((module, 'weight'))
-    prune.global_unstructured(parameters_to_prune, pruning_method=prune.L1Unstructured, amount=args.amount)
+        if isinstance(module, nn.Conv2d):
+            prune.ln_structured(module, name="weight", amount=args.amount, n=1, dim=0)  # Prune filters
+        elif isinstance(module, nn.Linear):
+            prune.ln_structured(module, name="weight", amount=args.amount, n=1, dim=1)  # Prune neurons
+
+    # Initialize Weights & Biases
+    name = "simple_100_epochs_depthwise_local_20_structured_epoch_50"
+    wandb.init(project="deep-learning-lab3", config=args.__dict__ , name=name, job_type="training_test")
 
     # 2) Retrain the model after global unstructured pruning
     for epoch in range(args.epochs):
@@ -137,20 +145,16 @@ def global_unstructured_pruning_train(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train a CNN on CIFAR-10")
-    parser.add_argument("--epochs", type=int, default=10, help="Number of training epochs")
+    parser.add_argument("--epochs", type=int, default=50, help="Number of training epochs")
     parser.add_argument("--weight_decay", type=float, default=0.0005, help="Weight decay for regularization")
     parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
     parser.add_argument("--learning_rate", type=float, default=0.001, help="Learning rate")
     parser.add_argument("--data_path", type=str, default="/opt/img/effdl-cifar10/", help="Path to the dataset")
-    parser.add_argument("--save_path", type=str, default="models/global_unstructured.pth", help="Path to save the model")
+    parser.add_argument("--save_path", type=str, default="simple_100_epochs_depthwise_local_20_structured_epoch_50", help="Path to save the model")
     parser.add_argument("--amount", type=float, default=0.2, help="amount for global unstructured pruning")
     
 
 
     args = parser.parse_args()
-    global_unstructured_pruning_train(args)
-
-    import torch
-import torch.nn.utils.prune as prune
-import torch.nn as nn
+    pruning_train(args)
 
