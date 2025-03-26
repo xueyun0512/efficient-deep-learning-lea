@@ -1,0 +1,1 @@
+{"Train Accuracy":92.214,"Learning Rate":1.0000000000000004e-08,"Num operations":1.08827648e+08,"Test Loss":0.30080278027968804,"_runtime":5335.324379,"Num params":2841930,"Train Loss":0.22644748628768316,"Test Accuracy":90.06,"_timestamp":1.7428445945902646e+09,"_wandb":{"runtime":5335},"_step":73}
