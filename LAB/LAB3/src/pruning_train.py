@@ -12,7 +12,7 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
 import sys
 import torch.nn.utils.prune as prune
-from factorization_train import DepthwiseSeparableConv, ResNet18_Modified_Depthwise
+from factorization_train import DepthwiseSeparableConv, ResNet18_Modified_Depthwise, ResNet18_Modified_Grouped
 
 sys.path.append("../LAB1")
 from resnet import ResNet18
@@ -45,11 +45,15 @@ def pruning_train(args):
 
 
     # Fetch the model
-    loaded_cpt = torch.load('./models/depthwise_epochs_100.pth')
+    loaded_cpt = torch.load('./models/grouped_8.pth')
     # print(loaded_cpt['model_state_dict'])
     model_no_flavor = ResNet18()
-    model = ResNet18_Modified_Depthwise(model_no_flavor, True)
-    # model = ResNet18_Modified_Grouped(model_no_flavor, True, 4)
+    # Depthwise total
+    # model = ResNet18_Modified_Depthwise(model_no_flavor, True)
+
+    # Depthwise partial
+    # model = ResNet18_Modified_Depthwise(model_no_flavor, use_depthwise_layers=['layer3', 'layer4'])
+    model = ResNet18_Modified_Grouped(model_no_flavor, True, 8)
     model.load_state_dict(loaded_cpt['model_state_dict'])
     model.to(device)
 
@@ -65,7 +69,7 @@ def pruning_train(args):
             prune.ln_structured(module, name="weight", amount=args.amount, n=1, dim=1)  # Prune neurons
 
     # Initialize Weights & Biases
-    name = "simple_100_epochs_depthwise_local_20_structured_epoch_50"
+    name = "grouped_8_local_20_structured_epoch_50"
     wandb.init(project="deep-learning-lab3", config=args.__dict__ , name=name, job_type="training_test")
 
     # 2) Retrain the model after global unstructured pruning
@@ -150,7 +154,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
     parser.add_argument("--learning_rate", type=float, default=0.001, help="Learning rate")
     parser.add_argument("--data_path", type=str, default="/opt/img/effdl-cifar10/", help="Path to the dataset")
-    parser.add_argument("--save_path", type=str, default="simple_100_epochs_depthwise_local_20_structured_epoch_50", help="Path to save the model")
+    parser.add_argument("--save_path", type=str, default="models/grouped_8_local_20_structured_epoch_50.pth", help="Path to save the model")
     parser.add_argument("--amount", type=float, default=0.2, help="amount for global unstructured pruning")
     
 

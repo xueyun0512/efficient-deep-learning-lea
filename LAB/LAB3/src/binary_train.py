@@ -156,7 +156,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
     parser.add_argument("--learning_rate", type=float, default=0.001, help="Learning rate")
     parser.add_argument("--data_path", type=str, default="/opt/img/effdl-cifar10/", help="Path to the dataset")
-    parser.add_argument("--save_path", type=str, default="models/ mymodelbc.pth", help="Path to save the model")
+    parser.add_argument("--save_path", type=str, default="models/mymodelbc.pth", help="Path to save the model")
     
 
 

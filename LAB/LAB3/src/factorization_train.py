@@ -19,6 +19,42 @@ from resnet_bis import ResNet18
 
 ############# FACTORIZATION: DEPTH WISE ########################################################################################################################
 # Depthwise Separable Convolution
+# class DepthwiseSeparableConv(nn.Module):
+#     def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, bias=False):
+#         super(DepthwiseSeparableConv, self).__init__()
+#         self.depthwise = nn.Conv2d(in_channels, in_channels, kernel_size=kernel_size, 
+#                                    stride=stride, padding=padding, groups=in_channels, bias=bias)
+#         self.pointwise = nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=bias)
+    
+#     def forward(self, x):
+#         x = self.depthwise(x)
+#         x = self.pointwise(x)
+#         return x
+    
+# class ResNet18_Modified_Depthwise(nn.Module):
+#     def __init__(self, original_model, use_depthwise):
+#         super(ResNet18_Modified_Depthwise, self).__init__()
+#         self.use_depthwise = use_depthwise
+#         self.modified_model = self.modify_layers(original_model)
+
+#     def modify_layers(self, model):
+#         for name, module in model.named_modules():
+#             if isinstance(module, nn.Conv2d) and module.kernel_size[0] > 1 and self.use_depthwise:
+#                 depthwise_conv = DepthwiseSeparableConv(module.in_channels, module.out_channels,
+#                                                         module.kernel_size, module.stride,
+#                                                         module.padding, module.bias is not None)
+#                 parent_name = name.rsplit('.', 1)[0]
+                
+#                 if '.' in name:  # If it's inside a block
+#                     parent = dict(model.named_modules())[parent_name]
+#                     setattr(parent, name.split('.')[-1], depthwise_conv)
+#                 else:  # If it's a top-level module
+#                     setattr(model, name, depthwise_conv)
+#         return model
+
+#     def forward(self, x):
+#         return self.modified_model(x)
+
 class DepthwiseSeparableConv(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0, bias=False):
         super(DepthwiseSeparableConv, self).__init__()
@@ -30,26 +66,27 @@ class DepthwiseSeparableConv(nn.Module):
         x = self.depthwise(x)
         x = self.pointwise(x)
         return x
-    
+
 class ResNet18_Modified_Depthwise(nn.Module):
-    def __init__(self, original_model, use_depthwise):
+    def __init__(self, original_model, use_depthwise_layers=['layer3', 'layer4']):
         super(ResNet18_Modified_Depthwise, self).__init__()
-        self.use_depthwise = use_depthwise
+        self.use_depthwise_layers = use_depthwise_layers
         self.modified_model = self.modify_layers(original_model)
 
     def modify_layers(self, model):
         for name, module in model.named_modules():
-            if isinstance(module, nn.Conv2d) and module.kernel_size[0] > 1 and self.use_depthwise:
-                depthwise_conv = DepthwiseSeparableConv(module.in_channels, module.out_channels,
-                                                        module.kernel_size, module.stride,
-                                                        module.padding, module.bias is not None)
-                parent_name = name.rsplit('.', 1)[0]
-                
-                if '.' in name:  # If it's inside a block
-                    parent = dict(model.named_modules())[parent_name]
-                    setattr(parent, name.split('.')[-1], depthwise_conv)
-                else:  # If it's a top-level module
-                    setattr(model, name, depthwise_conv)
+            if isinstance(module, nn.Conv2d) and module.kernel_size[0] > 1:
+                for layer in self.use_depthwise_layers:
+                    if layer in name:
+                        depthwise_conv = DepthwiseSeparableConv(module.in_channels, module.out_channels,
+                                                                module.kernel_size, module.stride,
+                                                                module.padding, module.bias is not None)
+                        parent_name = name.rsplit('.', 1)[0]
+                        if '.' in name:
+                            parent = dict(model.named_modules())[parent_name]
+                            setattr(parent, name.split('.')[-1], depthwise_conv)
+                        else:
+                            setattr(model, name, depthwise_conv)
         return model
 
     def forward(self, x):
@@ -163,8 +200,11 @@ def factorization_train(args):
     # use the original model from kuangliu repo
     model_no_falvor = ResNet18()
 
-    # Depthwise
-    model = ResNet18_Modified_Depthwise(model_no_falvor, args.use_depthwise).to(device)
+    # Depthwise total
+    # model = ResNet18_Modified_Depthwise(model_no_falvor, args.use_depthwise).to(device)
+
+    # Depthwise partial
+    model = ResNet18_Modified_Depthwise(model_no_falvor, use_depthwise_layers=['layer3', 'layer4']).to(device)
 
     # Grouped factorization
     # model = ResNet18(use_grouped=args.use_grouped, groups=args.groups).to(device)
@@ -175,7 +215,8 @@ def factorization_train(args):
     scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=3, verbose=True)
 
     # Initialize Weights & Biases
-    name = f"factorisation_grouped_{args.groups}"
+    #name = f"factorisation_grouped_{args.groups}"
+    name = "depthwise_partial"
     wandb.init(project="deep-learning-lab3", config=args.__dict__, name=name, job_type="training_test")
 
     # Training loop
@@ -259,7 +300,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
     parser.add_argument("--learning_rate", type=float, default=0.001, help="Learning rate")
     parser.add_argument("--data_path", type=str, default="/opt/img/effdl-cifar10/", help="Path to the dataset")
-    parser.add_argument("--save_path", type=str, default="models/depthwise_epochs_100.pth", help="Path to save the model")
+    parser.add_argument("--save_path", type=str, default="./models/depthwise_partial.pth", help="Path to save the model")
     parser.add_argument("--use_depthwise", action='store_true', help="Use depthwise separable convolutions")
     parser.add_argument("--use_grouped", action='store_true', help="Use grouped factorization on convolutions")
     parser.add_argument("--groups", type=int, default=2, help="Group size for grouped factorization")
